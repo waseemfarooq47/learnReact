@@ -1,14 +1,12 @@
 import React from "react";
 import "./Cards.css";
 
-function Cards({ cardTitle, Likes, Duration }) {
-  let img =
-    "https://indiater.com/wp-content/uploads/2021/06/free-fortnite-game-thumbnail-banner-design-psd-template.jpg";
+function Cards({ cardTitle, Likes, Duration, Thumbnail, Verify }) {
   return (
     <div className="cards-wrapper">
       <div className="card">
         <div className="card-img">
-          <img src={img} alt="thumbnail" />
+          <img src={Thumbnail} alt="thumbnail" />
         </div>
         <div className="card-details">
           <span className="card-title">{cardTitle}</span>
@@ -20,7 +18,19 @@ function Cards({ cardTitle, Likes, Duration }) {
             <span>
               <strong>Duration:</strong> {Duration}
             </span>
+
+            {Verify === true ? (
+              <span>
+                <strong>Verified:</strong> ✅
+              </span>
+            ) : (
+              <span>
+                <strong>Unverified:</strong> ❌
+              </span>
+            )}
           </div>
+
+          <button  onClick={}>Subscribe 👆</button>
         </div>
       </div>
     </div>
