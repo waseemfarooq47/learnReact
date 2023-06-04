@@ -30,7 +30,7 @@ function Cards({ cardTitle, Likes, Duration, Thumbnail, Verify }) {
             )}
           </div>
 
-          <button  onClick={}>Subscribe 👆</button>
+          {/* <button onClick={handleClicker()}>Subscribe 👆</button> */}
         </div>
       </div>
     </div>
