@@ -1,7 +1,9 @@
 import "./App.css";
 import Cards from "./components/Cards";
 import data from "./sample-data/data";
+import Counter from "./components/Counter";
 import Button from "./components/Button";
+// import Assignment from "./assignment-work/assignment";
 function App() {
   return (
     <>
@@ -13,12 +15,22 @@ function App() {
             Duration={cards.Duration}
             Thumbnail={cards.Thumbnail}
             Verify={cards.Verify}
-          />
+          >
+            <Button
+              onTap={() => console.log("Playing...")}
+              onClick={() => console.log("Paused")}
+            >
+              {cards.cardTitle}
+            </Button>
+          </Cards>
         ))}
-
-        <Button onTap={() => console.log("hello i am On")}>On</Button>
-        <Button onTap={() => alert("hi i am off")}>Off</Button>
       </div>
+      {true && (
+        <div className="assignment">
+          {/* <Assignment /> */}
+          <Counter />
+        </div>
+      )}
     </>
   );
 }

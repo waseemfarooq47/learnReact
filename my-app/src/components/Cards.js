@@ -1,7 +1,7 @@
 import React from "react";
 import "./Cards.css";
 
-function Cards({ cardTitle, Likes, Duration, Thumbnail, Verify }) {
+function Cards({ cardTitle, Likes, Duration, Thumbnail, Verify, children }) {
   return (
     <div className="cards-wrapper">
       <div className="card">
@@ -29,6 +29,8 @@ function Cards({ cardTitle, Likes, Duration, Thumbnail, Verify }) {
               </span>
             )}
           </div>
+
+          <div>{children}</div>
 
           {/* <button onClick={handleClicker()}>Subscribe 👆</button> */}
         </div>
